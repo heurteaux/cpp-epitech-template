@@ -1,4 +1,4 @@
-- Add assignment
-- Set secret ssh private key in Github
-- Set repository variable MIRROR_REPOSITORY
+- Add 'assignment.pdf' file
+- Set repository secret 'GIT_SSH_PRIVATE_KEY'
+- Set repository variable 'MIRROR_REPOSITORY'
 - Fill README.md
