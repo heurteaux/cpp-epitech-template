@@ -1,0 +1,4 @@
+- Add assignment
+- Set secret ssh private key in Github
+- Set repository variable MIRROR_REPOSITORY
+- Fill README.md
