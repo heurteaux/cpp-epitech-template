@@ -45,17 +45,8 @@ endfunction()
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
     include(CheckCXXCompilerFlag)
     foreach(flag IN ITEMS
-            -g3 -O0
-            -fsanitize=address -fsanitize=undefined -fsanitize=leak
-            -fno-omit-frame-pointer -fstack-protector
-            -Werror -Wextra -Wall -Wpedantic)
-        check_cxx_compiler_flag(${flag} COMPILER_SUPPORTS_${flag})
-        if(COMPILER_SUPPORTS_${flag})
-            add_compile_options($<$<CONFIG:Debug>:${flag}>)
-            if(flag MATCHES "fsanitize")
-                add_link_options($<$<CONFIG:Debug>:${flag}>)
-            endif()
-        endif()
+            -g3 -Werror -Wextra -Wall -Wpedantic)
+        add_compile_options($<$<CONFIG:Debug>:${flag}>)
     endforeach()
 endif()
 
